@@ -1,6 +1,7 @@
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -14,7 +15,8 @@ module.exports = {
     },
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist',
+        hot: true
     },
     module: {
         rules: [
@@ -44,6 +46,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management',     // 打包html标题
             // template: './src/index.html'    // html路径（指定html模板）
-        })
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
