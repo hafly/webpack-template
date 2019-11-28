@@ -14,3 +14,4 @@
 * 生产环境和开发环境配置分离
 * [代码分离](https://webpack.docschina.org/guides/code-splitting/)：防止切片中代码重复，详细查看[SplitChunks插件](https://webpack.docschina.org/plugins/split-chunks-plugin/)
 * 代码分离-动态导入
+* 懒加载
