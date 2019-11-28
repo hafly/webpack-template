@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -50,6 +51,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Output Management',     // 打包html标题
             // template: './src/index.html'    // html路径（指定html模板）
+        }),
+        new webpack.ProvidePlugin({
+            _: 'lodash'
         })
     ]
 };
