@@ -1,11 +1,11 @@
 const path = require('path');
-const webpack = require('webpack');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        index: './src/index.js',
+        page1: './src/page/page1/index.js',
+        page2: './src/page/page2/index.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -49,11 +49,14 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            title: 'Output Management',     // 打包html标题
-            // template: './src/index.html'    // html路径（指定html模板）
+            template: './src/page/page1/index.html',
+            filename: 'index.html',   // 生成的html页面的名字为one.html
+            // title: "one",           // 它的title为one，记得要在src/one.html中加入<%= %>
+            // chunks: ['one']
         }),
-        new webpack.ProvidePlugin({
-            _: 'lodash'
+        new HtmlWebpackPlugin({
+            template: './src/page/page2/index.html',
+            filename: 'two.html',
         })
     ]
 };
