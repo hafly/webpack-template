@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'production',
     entry: {
         index: './src/index.js',
         page1: './src/page1.js'
