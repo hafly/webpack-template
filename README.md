@@ -16,3 +16,4 @@
 * 代码分离-动态导入
 * 懒加载
 * shim 预置依赖-shim 预置全局变量
+* 添加less支持：cnpm install -D babel-loader @babel/core @babel/preset-env
