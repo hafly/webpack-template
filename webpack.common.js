@@ -27,18 +27,11 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.less$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'less-loader',
-                ]
+                use: ['style-loader', 'css-loader', 'less-loader',]
             },
             {
                 test: /\.js$/,
@@ -67,12 +60,16 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
+            chunks:['commons','page1'],
             template: './src/page/page1/index.html',
             filename: 'index.html',   // 生成的html页面的名字为one.html
             // title: "one",           // 它的title为one，记得要在src/one.html中加入<%= %>
             // chunks: ['one']
+            minify:{
+            }
         }),
         new HtmlWebpackPlugin({
+            chunks:['commons','page2'],
             template: './src/page/page2/index.html',
             filename: 'page2.html',
         })

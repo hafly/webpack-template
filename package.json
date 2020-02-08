@@ -26,6 +26,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "echarts": "^4.6.0",
+    "zepto-webpack": "^1.2.1"
   }
 }
