@@ -74,7 +74,10 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/page/page2/index.html',
-            filename: 'two.html',
+            filename: 'page2.html',
         })
-    ]
+    ],
+    stats: {
+        children: false
+    }
 };
