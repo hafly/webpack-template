@@ -1,4 +1,4 @@
-### webpack开发模板
+## webpack开发模板
 
 用于快速初始化项目
 
@@ -17,3 +17,15 @@
 * 懒加载
 * shim 预置依赖-shim 预置全局变量
 * 添加less支持：cnpm install -D babel-loader @babel/core @babel/preset-env
+
+### 代码运行
+```
+# 安装依赖
+yarn install
+
+# 启动
+npm start
+
+# 编译
+npm run build
+```
